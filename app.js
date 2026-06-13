@@ -2,19 +2,24 @@
 // DEMO ACCOUNT
 // Pre-loaded data used when someone clicks "Try demo account"
 // ============================================================
+// Demo account transactions are tuned so calcScore() returns exactly 65:
+// income=30000, expense=15000 → savingsRate=0.5 (×50 = 25pts)
+// wants=3750, expense=15000  → wantsRate=0.25 → (1-0.25)×40 = 30pts
+// has a goal                 → goalBonus = 10pts  →  total = 65
 const DEMO = {
   name:"Tunde Adeyemi",
   email:"tunde@demo.com",
   password:"demo123",
   transactions:[
-    {id:1,type:"income",amount:15000,category:"Allowance",description:"Weekly allowance",date:"2024-06-01",wantsNeeds:"needs"},
-    {id:2,type:"expense",amount:2500,category:"Food",description:"Lunch and snacks",date:"2024-06-02",wantsNeeds:"needs"},
-    {id:3,type:"expense",amount:1500,category:"Transport",description:"Bus fare",date:"2024-06-03",wantsNeeds:"needs"},
-    {id:4,type:"expense",amount:3000,category:"Fun",description:"Cinema outing",date:"2024-06-04",wantsNeeds:"wants"},
-    {id:5,type:"income",amount:8000,category:"Side hustle",description:"Graphic design job",date:"2024-06-05",wantsNeeds:"needs"},
-    {id:6,type:"expense",amount:2000,category:"Data",description:"Mobile data bundle",date:"2024-06-06",wantsNeeds:"needs"},
-    {id:7,type:"expense",amount:4500,category:"Fun",description:"Clothes shopping",date:"2024-06-07",wantsNeeds:"wants"},
-    {id:8,type:"expense",amount:500,category:"School",description:"Stationery",date:"2024-06-08",wantsNeeds:"needs"},
+    {id:1,type:"income", amount:20000,category:"Allowance",   description:"Monthly allowance",      date:"2024-06-01",wantsNeeds:"needs"},
+    {id:2,type:"expense",amount:3000, category:"Food",        description:"Lunch and snacks",        date:"2024-06-02",wantsNeeds:"needs"},
+    {id:3,type:"expense",amount:2000, category:"Transport",   description:"Bus fare",                date:"2024-06-03",wantsNeeds:"needs"},
+    {id:4,type:"expense",amount:2500, category:"Fun",         description:"Cinema outing",           date:"2024-06-04",wantsNeeds:"wants"},
+    {id:5,type:"income", amount:10000,category:"Side hustle", description:"Graphic design job",      date:"2024-06-05",wantsNeeds:"needs"},
+    {id:6,type:"expense",amount:2000, category:"Data",        description:"Mobile data bundle",      date:"2024-06-06",wantsNeeds:"needs"},
+    {id:7,type:"expense",amount:1250, category:"Fun",         description:"Clothes shopping",        date:"2024-06-07",wantsNeeds:"wants"},
+    {id:8,type:"expense",amount:1000, category:"School",      description:"Stationery",              date:"2024-06-08",wantsNeeds:"needs"},
+    {id:9,type:"expense",amount:3250, category:"Food",        description:"Weekly groceries",        date:"2024-06-10",wantsNeeds:"needs"},
   ],
   goals:[{id:1,name:"Buy AirPods",target:35000,saved:12000,deadline:"2024-08-01"}]
 };
