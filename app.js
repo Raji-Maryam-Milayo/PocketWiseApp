@@ -499,7 +499,6 @@ function deleteTransaction(id) {
   render();
 }
 
-
 // ============================================================
 // RENDER: WANTS VS NEEDS TAB
 // Shows what percentage of spending is wants vs needs,
